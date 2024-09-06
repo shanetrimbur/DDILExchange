@@ -77,42 +77,6 @@ Feel free to contribute or report any issues in the GitHub repository.
 
 The following file and directory structure is created by the Kickstart file during installation. This structure ensures proper organization and separation of services for the collaboration server.
 
-/                       # Root directory
-├── /boot/              # Boot partition
-├── /home/              # Home directory (user-specific files)
-├── /var/
-│   ├── /lib/
-│   │   └── /radicale/              # Radicale data storage
-│   │       └── /collections/       # CalDAV and CardDAV data
-│   ├── /mail/
-│   │   └── /domain/                # Email storage (Maildir format)
-│   ├── /backups/
-│   │   └── /rsnapshot/             # Backup storage for rsnapshot
-│   ├── /www/
-│   │   └── /html/
-│   │       └── /nextcloud/         # Nextcloud installation and data directory
-│   │           ├── /config/        # Nextcloud configuration files
-│   │           └── /data/          # Nextcloud user data storage
-├── /etc/
-│   ├── /postfix/                   # Postfix configuration directory
-│   │   └── main.cf                 # Main Postfix configuration file
-│   ├── /dovecot/                   # Dovecot configuration directory
-│   │   └── dovecot.conf            # Main Dovecot configuration file
-│   ├── /nginx/                     # Nginx web server configuration
-│   │   └── /conf.d/
-│   │       └── roundcube.conf      # Nginx config for Roundcube webmail
-│   ├── /roundcubemail/             # Roundcube configuration directory
-│   │   └── config.inc.php          # Roundcube main configuration file
-│   ├── /radicale/                  # Radicale configuration directory
-│   │   └── config                  # Radicale main configuration file
-│   ├── /rsnapshot.conf             # Configuration file for rsnapshot backups
-│   ├── /spamassassin/              # SpamAssassin configuration directory
-│   └── /clamav/                    # ClamAV antivirus configuration directory
-├── /var/spool/postfix/             # Postfix mail queue directory
-├── /var/run/                       # PID files and Unix socket for services (e.g., PHP-FPM, Dovecot)
-├── /etc/keepalived/                # Keepalived for high availability
-└── /usr/share/roundcubemail/       # Roundcube webmail installation directory
-
 Key Components of the Structure:
 
     /boot/: Contains the bootloader and kernel files for the system.
